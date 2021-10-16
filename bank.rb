@@ -1,5 +1,5 @@
 class Bank
-  
+  attr_accessor :score
   def initialize
     @score = 100
   end
@@ -10,9 +10,5 @@ class Bank
 
   def score_up(sum)
     @score += sum
-  end
-  
-  def score_down()
-    @score -= 10
-  end  
+  end 
 end

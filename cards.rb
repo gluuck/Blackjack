@@ -31,11 +31,9 @@ class Cards
     if sum_arr.include?(1)
       @element = cards[sum_arr.index(1)]
     end
-  end
-  
+  end  
   
   def change_sum_arr
     sum_arr[cards.index(element)] = change_value(element)    
-  end
-  
+  end  
 end
