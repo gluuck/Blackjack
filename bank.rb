@@ -5,7 +5,7 @@ class Bank
   end
 
   def bet
-    @score -=10
+    @score -= 10
   end
 
   def score_up(sum)

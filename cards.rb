@@ -14,7 +14,7 @@ module CardsMethods
     end  
   end
 
-  def generate     
+  def generate(card)     
     cards << var = card.keys.sample
     sum_arr.push(card[var])
     card.delete(var)
@@ -29,16 +29,17 @@ module CardsMethods
   end
 
   def change_value(value)
-    card[value] = 11
+    sum_arr[value] = 11
   end
 
   def find_el
     if sum_arr.include?(1)
-      @element = cards[sum_arr.index(1)]
+      @element = sum_arr.index(1)
     end
   end  
   
   def change_sum_arr
-    sum_arr[cards.index(element)] = change_value(element)    
+    find_el
+    sum_arr[element] = change_value(element)    
   end  
 end
