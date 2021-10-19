@@ -26,8 +26,6 @@ class Game
     end
   end
   
-  private
-
   def game
       @all_many = player.score.score + dealer.score.score
       2.times {player.generate(self.card)} 
