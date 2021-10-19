@@ -10,7 +10,6 @@ class Game
     name = gets.chomp
     @player = Player.new(name)
     @dealer = Dealer.new
-    game
   end
 
   def open_game
@@ -19,13 +18,17 @@ class Game
       input = gets.chomp.downcase
       case input
       when 'start'
-        start
+        player.cards.clear
+        player.sum_arr.clear
+        dealer.cards.clear
+        dealer.sum_arr.clear
+        game
       when 'exit'
         break
       end
     end
   end
-  
+
   def game
       @all_many = player.score.score + dealer.score.score
       2.times {player.generate(self.card)} 
